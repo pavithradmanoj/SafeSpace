@@ -9,8 +9,8 @@
 ### Team Name: [Name]
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: Shreya Ajith - LBS Institute of Technology for Women
+- Member 2: Pavithra K M- LBS Institute of Technology for Women
 
 ### Hosted Project Link
 [mention your project hosted link here]
