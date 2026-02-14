@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SafeSpace</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ── LANDING PAGE ── -->
+  <div id="landingPage">
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-center">
+        <div class="landing-logo">🛡️</div>
+        <h1 class="landing-title">SafeSpace</h1>
+        <p class="landing-sub">COMMUNITY CIVIC REPORTER</p>
+        <p class="landing-desc">Report local issues anonymously. Hold your community accountable.</p>
+        <div class="landing-btns">
+          <button class="btn-primary" onclick="goTo('user')">👤 I'm a Citizen</button>
+          <button class="btn-outline" onclick="goTo('authority')">🏛 I'm an Authority</button>
+        </div>
+        <div class="scroll-hint">
+          <span>scroll to learn more</span>
+          <div class="scroll-arrow">↓</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is SafeSpace -->
+    <section class="about-section fade-section">
+      <div class="about-container">
+        <div class="section-tag">WHAT IS SAFESPACE</div>
+        <h2 class="about-heading">Your city. Your voice.<br/>Your responsibility.</h2>
+        <p class="about-body">
+          SafeSpace is a community-driven civic reporting platform that lets citizens
+          anonymously report local issues — broken streetlights, potholes, garbage dumps,
+          safety hazards — directly to the right government authority. No bureaucracy.
+          No paperwork. Just one report, straight to the people who can fix it.
+        </p>
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-card-icon">⬆</div>
+            <div class="about-card-title">Upvote</div>
+            <div class="about-card-desc">The Upvote feature allows community members to support important reports, helping high-priority issues gain visibility and faster authority attention.</div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🔒</div>
+            <div class="about-card-title">Anonymous</div>
+            <div class="about-card-desc">Report issues without revealing your identity. Your safety matters as much as your city's.</div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">⚡</div>
+            <div class="about-card-title">Instant Routing</div>
+            <div class="about-card-desc">Reports go directly to the right authority — KSEB, Municipal Corp, Police — automatically.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="about-section fade-section alt-bg">
+      <div class="about-container">
+        <div class="section-tag">HOW IT WORKS</div>
+        <h2 class="about-heading">Three steps to a<br/>better city.</h2>
+        <div class="steps-list">
+          <div class="step fade-section">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <div class="step-title">Spot the issue</div>
+              <div class="step-desc">See a pothole, broken streetlight, garbage dump or safety hazard anywhere in your city? Open SafeSpark on your phone or browser.</div>
+            </div>
+          </div>
+          <div class="step-line"></div>
+          <div class="step fade-section">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <div class="step-title">Report any time</div>
+              <div class="step-desc">Search your location, select the category, describe the issue, upload a photo and hit submit. No forms, no queues, no offices.</div>
+            </div>
+          </div>
+          <div class="step-line"></div>
+          <div class="step fade-section">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <div class="step-title">Authority takes action</div>
+              <div class="step-desc">The right government department sees your report instantly, filters and searches all issues, and marks them resolved when fixed.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="about-section fade-section">
+      <div class="about-container mission-container">
+        <div class="section-tag">OUR MISSION</div>
+        <h2 class="about-heading mission-heading">"We believe every citizen<br/>deserves a city that listens."</h2>
+        <p class="about-body mission-body">
+          Most civic problems go unreported — not because people don't care, but because
+          reporting feels pointless. SafeSpark changes that. We're building the bridge
+          between frustrated citizens and accountable authorities, one report at a time.
+        </p>
+        <div class="mission-stats">
+          <div class="mission-stat">
+            <div class="mission-stat-num">13+</div>
+            <div class="mission-stat-label">Reports Filed</div>
+          </div>
+          <div class="mission-stat">
+            <div class="mission-stat-num">7</div>
+            <div class="mission-stat-label">Authorities Connected</div>
+          </div>
+          <div class="mission-stat">
+            <div class="mission-stat-num">1</div>
+            <div class="mission-stat-label">City Covered</div>
+          </div>
+        </div>
+        <div class="cta-wrap">
+          <button class="btn-primary cta-btn" onclick="goTo('user')">Start Reporting →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="landing-footer">
+      <div class="footer-logo">🛡️ SafeSpace</div>
+      <div class="footer-sub">@ 2026 SafeSpace.All rights reserved</div>
+    </footer>
+
+  </div>
+
+  <!-- ── USER INTERFACE ── -->
+  <div id="userPage" class="hidden">
+
+    <header>
+      <div class="logo-wrap">
+        <div class="logo-icon">🛡️</div>
+        <div>
+          <div class="logo-title">SafeSpace</div>
+          <div class="logo-sub">CITIZEN PORTAL</div>
+        </div>
+      </div>
+      <div class="header-right">
+        <button class="btn-ghost" onclick="goTo('landing')">← Back</button>
+        <button class="btn-primary" onclick="openReportForm()">+ Report Issue</button>
+      </div>
+    </header>
+
+    <div class="stats-bar">
+      <div class="stat"><span id="u-total" class="stat-num cyan">3</span><span class="stat-label">Total Reports</span></div>
+      <div class="stat"><span id="u-high" class="stat-num red">2</span><span class="stat-label">High Severity</span></div>
+      <div class="stat"><span id="u-upvotes" class="stat-num green">102</span><span class="stat-label">Community Upvotes</span></div>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all" onclick="setFilter(this,'all')">All</button>
+      <button class="filter-btn" data-filter="safety" onclick="setFilter(this,'safety')">⚠️ Safety</button>
+      <button class="filter-btn" data-filter="lighting" onclick="setFilter(this,'lighting')">💡 Poor Lighting</button>
+      <button class="filter-btn" data-filter="sanitation" onclick="setFilter(this,'sanitation')">🗑️ Sanitation</button>
+      <button class="filter-btn" data-filter="infrastructure" onclick="setFilter(this,'infrastructure')">🔧 Infrastructure</button>
+      <button class="filter-btn" data-filter="Water Supply" onclick="setFilter(this,'Water Supply')">🚰 Water Supply</button>
+      <button class="filter-btn" data-filter="Emergency" onclick="setFilter(this,'Emergency')">🌪Emergency</button>
+      <button class="filter-btn" data-filter="other" onclick="setFilter(this,'other')">📌 Other</button>
+    </div>
+
+    <div class="main-layout">
+      <div class="sidebar full-width">
+        <div class="report-count" id="u-count">3 REPORTS</div>
+        <div id="userReportList"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── AUTHORITY INTERFACE ── -->
+  <div id="authorityPage" class="hidden">
+
+    <header>
+      <div class="logo-wrap">
+        <div class="logo-icon">🏛️</div>
+        <div>
+          <div class="logo-title">SafeSpace</div>
+          <div class="logo-sub">AUTHORITY PORTAL</div>
+        </div>
+      </div>
+      <div class="header-right">
+        <button class="btn-ghost" onclick="goTo('landing')">← Back</button>
+        <div class="authority-badge">🔒 Authority View</div>
+      </div>
+    </header>
+
+    <div class="authority-controls">
+      <div class="control-group">
+        <label class="ctrl-label">FILTER BY CATEGORY</label>
+        <select id="authCategoryFilter" class="ctrl-select" onchange="renderAuthorityReports()">
+          <option value="all">All Categories</option>
+          <option value="safety">⚠️ Safety</option>
+          <option value="lighting">💡 Poor Lighting</option>
+          <option value="sanitation">🗑️ Sanitation</option>
+          <option value="Water Supply">🚰 Water Supply</option>
+          <option value="Emergency">🌪Emergency</option>
+          <option value="other">📌 Other</option>
+        </select>
+      </div>
+      <div class="control-group search-group">
+        <label class="ctrl-label">KEYWORD SEARCH</label>
+        <div class="search-row">
+          <input type="text" id="authSearch" class="ctrl-input" placeholder="Search reports by keyword..."/>
+          <button class="btn-primary" onclick="renderAuthorityReports()">Search</button>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="ctrl-label">FILTER BY AUTHORITY</label>
+        <select id="authOrgFilter" class="ctrl-select" onchange="renderAuthorityReports()">
+          <option value="all">All Authorities</option>
+          <option value="Municipal Corporation">Municipal Corporation</option>
+          <option value="Kerala State Electricity Board">Kerala State Electricity Board</option>
+          <option value="Water Authority">Kerala State Electricity Board</option>
+          <option value="Sanitation Wing">Sanitation Wing</option>
+          <option value="Police">Police</option>
+          <option value="PWD">PWD</option>
+          <option value="Traffic Police">Traffic Police</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat"><span id="a-total" class="stat-num cyan">14</span><span class="stat-label">Total Reports</span></div>
+      <div class="stat"><span id="a-pending" class="stat-num red">10</span><span class="stat-label">Pending</span></div>
+      <div class="stat"><span id="a-resolved" class="stat-num green">5</span><span class="stat-label">Resolved</span></div>
+    </div>
+
+    <div class="authority-grid-wrap">
+      <div id="authorityReportGrid" class="authority-grid"></div>
+    </div>
+
+  </div>
+
+  <!-- ── REPORT FORM MODAL ── -->
+  <div id="reportFormModal" class="modal hidden">
+    <div class="modal-box large-modal">
+      <div class="modal-header">
+        <h2>Report an Issue</h2>
+        <button class="close-btn" onclick="closeReportForm()">✕</button>
+      </div>
+
+      <label class="field-label">📍 SEARCH LOCATION</label>
+      <div class="location-row">
+        <input type="text" id="locationInput" class="input-field" placeholder="Enter area, street or landmark"/>
+        <button class="btn-outline-small" onclick="searchLocation()">📍 Locate</button>
+      </div>
+      <div id="locationResult" class="location-result hidden">
+        <span class="location-pin-icon">📌</span>
+        <span id="locationText"></span>
+      </div>
+
+      <label class="field-label">🏛 SEND REPORT TO</label>
+      <select id="formAuthority" class="input-field" onchange="syncCategoryFromAuthority()">
+        <option value="Municipal Corporation">Municipal Corporation</option>
+        <option value="Kerala State Electricity Board">Kerala State Electricity Board</option>
+        <option value="Sanitation Wing">Sanitation Wing</option>
+        <option value="Police">Police</option>
+        <option value="Police">Police</option>
+        <option value="PWD">PWD</option>
+        <option value="Traffic Police">Traffic Police</option>
+      </select>
+
+      <label class="field-label">📂 CATEGORY</label>
+      <select id="formCategory" class="input-field" onchange="syncAuthorityFromCategory()">
+        <option value="safety">⚠️ Safety</option>
+        <option value="lighting">💡 Poor Lighting</option>
+        <option value="sanitation">🗑️ Sanitation</option>
+        <option value="infrastructure">🔧 Infrastructure</option>
+        <option value="Water Supply">🚰 Water Supply</option>
+        <option value="Emergency">🌪Emergency</option>
+        <option value="other">📌 Other</option>
+      </select>
+
+      <label class="field-label">🔴 SEVERITY</label>
+      <select id="formSeverity" class="input-field">
+        <option value="Low">Low</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <label class="field-label">📝 ISSUE DESCRIPTION</label>
+      <textarea id="formDesc" class="input-field" rows="4" placeholder="Describe the issue — what, where, how long, how severe..."></textarea>
+
+      <label class="field-label">📷 UPLOAD PHOTO (optional)</label>
+      <div class="photo-upload-area" id="photoDropArea" onclick="document.getElementById('photoInput').click()">
+        <div id="photoPreviewWrap">
+          <div class="upload-icon">📷</div>
+          <div class="upload-hint">Click to upload a photo of the issue</div>
+          <div class="upload-hint-small">JPG, PNG up to 5MB</div>
+        </div>
+        <img id="photoPreview" class="hidden" alt="preview"/>
+      </div>
+      <input type="file" id="photoInput" accept="image/*" class="hidden" onchange="previewPhoto(event)"/>
+
+      <button class="btn-submit" id="submitReportBtn" onclick="submitReport()">Submit Report →</button>
+    </div>
+  </div>
+
+  <!-- ── REPORT DETAIL MODAL ── -->
+  <div id="detailModal" class="modal hidden">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="detail-title-row">
+          <span id="d-icon" class="detail-icon"></span>
+          <div>
+            <div id="d-title" class="detail-title"></div>
+            <div id="d-date" class="detail-date"></div>
+          </div>
+        </div>
+        <button class="close-btn" onclick="closeDetail()">✕</button>
+      </div>
+      <div class="badge-row">
+        <span id="d-severity" class="badge"></span>
+        <span id="d-authority" class="badge cyan-badge"></span>
+        <span id="d-location" class="badge location-badge"></span>
+      </div>
+      <div id="d-photo-wrap" class="detail-photo-wrap hidden">
+        <img id="d-photo" class="detail-photo" alt="report photo"/>
+      </div>
+      <div class="detail-section">
+        <div class="section-label">DESCRIPTION</div>
+        <div id="d-desc" class="section-text"></div>
+      </div>
+      <div class="detail-actions">
+        <button class="upvote-btn-large" onclick="upvoteFromDetail()">↑ <span id="d-upvotes"></span> Upvotes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── AUTHORITY DETAIL MODAL ── -->
+  <div id="authDetailModal" class="modal hidden">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="detail-title-row">
+          <span id="ad-icon" class="detail-icon"></span>
+          <div>
+            <div id="ad-title" class="detail-title"></div>
+            <div id="ad-date" class="detail-date"></div>
+          </div>
+        </div>
+        <button class="close-btn" onclick="document.getElementById('authDetailModal').classList.add('hidden')">✕</button>
+      </div>
+      <div class="badge-row">
+        <span id="ad-severity" class="badge"></span>
+        <span id="ad-category" class="badge cyan-badge"></span>
+        <span id="ad-status" class="badge"></span>
+      </div>
+      <div id="ad-photo-wrap" class="detail-photo-wrap hidden">
+        <img id="ad-photo" class="detail-photo" alt="report photo"/>
+      </div>
+      <div class="detail-section">
+        <div class="section-label">LOCATION</div>
+        <div id="ad-location" class="section-text"></div>
+      </div>
+      <div class="detail-section">
+        <div class="section-label">DESCRIPTION</div>
+        <div id="ad-desc" class="section-text"></div>
+      </div>
+      <div class="detail-section">
+        <div class="section-label">ASSIGNED TO</div>
+        <div id="ad-authority" class="section-text cyan-text"></div>
+      </div>
+      <div class="detail-actions">
+        <button class="btn-resolve" id="resolveBtn" onclick="toggleResolve()">✓ Mark as Resolved</button>
+        <div class="upvote-count-display">↑ <span id="ad-upvotes"></span> upvotes</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <!-- Authority Login Modal -->
+
+
+<div id="authorityLoginModal" class="modal hidden">
+  <div class="modal-content" style="max-width: 420px;">
+    <div style="text-align: center; margin-bottom: 24px;">
+      <div style="font-size: 48px; margin-bottom: 12px;">🔐</div>
+      <h2 style="margin: 0; font-size: 24px; color: var(--text);">Authority Login</h2>
+      <p style="margin: 8px 0 0; color: var(--muted); font-size: 14px;">
+        Authorized personnel only
+      </p>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <label style="display: block; margin-bottom: 6px; font-size: 13px; font-weight: 500; color: var(--text);">
+        Username
+      </label>
+      <input 
+        type="text" 
+        id="loginUsername" 
+        placeholder="Enter username"
+        style="width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 14px;"
+        autocomplete="username"
+      />
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; margin-bottom: 6px; font-size: 13px; font-weight: 500; color: var(--text);">
+        Password
+      </label>
+      <input 
+        type="password" 
+        id="loginPassword" 
+        placeholder="Enter password"
+        style="width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 14px;"
+        autocomplete="current-password"
+      />
+    </div>
+
+    <div id="loginError" style="color: #ff4757; font-size: 13px; margin-bottom: 16px; min-height: 18px; text-align: center;"></div>
+
+    <div style="display: flex; gap: 12px;">
+      <button 
+        onclick="closeAuthorityLogin()" 
+        style="flex: 1; padding: 12px; border: 1px solid var(--border); background: transparent; color: var(--text); border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 500;"
+      >
+        Cancel
+      </button>
+      <button 
+        onclick="attemptAuthorityLogin()" 
+        style="flex: 1; padding: 12px; border: none; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 500;"
+      >
+        Login
+      </button>
+    </div>
+
+    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center;">
+      <p style="margin: 0; font-size: 12px; color: var(--muted);">
+        Default credentials for testing:<br/>
+        <code style="background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 11px;">admin / admin123</code>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Also add a logout button to the Authority Page header -->
+<!-- Find the authority page header and add this button: -->
+
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+  <!--<h1>Authority Dashboard</h1>-->
+  <div style="display: flex; gap: 12px; align-items: center;">
+    <span id="authorityUserDisplay" style="font-size: 14px; color: var(--muted);"></span>
+    <button onclick="authorityLogout()" style="padding: 8px 16px; background: #ff4757; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 13px;">
+      Logout
+    </button>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
