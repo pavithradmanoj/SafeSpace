@@ -84,24 +84,34 @@ List the key features of your project:
 #### Screenshots (Add at least 3)
 
 ![Screenshot1](Add screenshot 1 here with proper name)
-![alt text](image.png)
+<p align="center">
+  <img src="./images/image.png" alt="HomePage" width="100%">
+</p>
 Home Page or the Landing page of our website SafeSpace
 
 ![Screenshot2](Add screenshot 2 here with proper name)
-![alt text](<images/Screenshot (136).png>)
+<p align="center">
+  <img src="\images\Screenshot (136).png" alt="User Interface" width="100%">
+</p>
 Shows the user interface where user can see each issue reported in each category, upvote in issues and 
 is known reporting the issue.
 
 ![Screenshot3](Add screenshot 3 here with proper name)
-![alt text](<images/Screenshot (134).png>)
+<p align="center">
+  <img src="\images\Screenshot (134).png" alt="Report and Issue" width="100%">
+</p>
 Here there is form for reporting the issue for user which includes features like location,which authority the issue should be brought to notice and which category the issue belongs to and to provide description to the issue and submit photo if required.
 
 ![Screenshot4](Add screenshot 4 here with proper name)
-![alt text](<images/Screenshot (135).png>)
+<p align="center">
+  <img src="\images\Screenshot (135).png" alt="Authority Login" width="100%">
+</p>
 Here this is the Authority login , where each Authority get's their unique password.Then using default password the authority officials can login.
 
 ![Screenshot5](Add screenshot 5 here with proper name)
-![alt text](<images/Screenshot (139).png>)
+<p align="center">
+  <img src="\images\Screenshot (139).png" alt="Authority Interface" width="100%">
+</p>
 This is the Authority interface , where authority can select their authority from drop down and resolve the issue and mark them , so that report no longer exits in User interface.
 
 
@@ -113,7 +123,31 @@ This is the Authority interface , where authority can select their authority fro
 **System Architecture:**
 
 ![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+<p align="center">
+  <img src="\images\Screenshot 2026-02-14 100538.png" alt="Architecture Diagram" width="100%">
+</p>
+# SafeSpace System Architecture
+
+## Components
+**5-Layer Structure:**
+- **User Layer:** Citizens (report issues) + Authorities (manage reports)
+- **Frontend Layer:** `index.html` (structure), `style.css` (styling), `app.js` (logic)
+- **Logic Layer:** State management (JS array), Navigation (CSS classes), Filters (real-time search), Form processor (submissions + photo base64)
+- **Browser APIs:** FileReader (photo conversion), Intersection Observer (scroll animations), Clipboard API (copy text)
+- **Output Layer:** Citizen Portal, Authority Portal, Stats Dashboard, Landing Page
+
+## Data Flow
+Load → Initialize seed reports → Citizen submits form → Photo converts to base64 → New report pushed to array → UI re-renders → Authority filters/searches → Marks resolved → Array updates → UI refreshes instantly
+
+## Tech Stack
+- HTML loads CSS (link) + JS (script)
+- CSS defines variables, styles, `.fade-section`/`.visible` for animations
+- JS manipulates DOM (`getElementById`, `innerHTML`), applies dynamic inline styles, calls Browser APIs
+- Google Fonts via CDN
+- **100% client-side** — no server, no database, no build tools
+
+
+
 
 **Application Workflow:**
 
@@ -135,7 +169,9 @@ This is the Authority interface , where authority can select their authority fro
 #### Build Photos
 
 ![Team](Add photo of your team here)
-
+<p align="center">
+  <img src="\images\WhatsApp Image 2026-02-14 at 10.13.42 AM.jpeg" alt="Team Photo" width="100%">
+</p>
 ![Components](Add photo of your components here)
 *List out all components shown*
 
@@ -388,21 +424,21 @@ python script.py -v --format json data.json
 
 ## AI Tools Used (Optional - For Transparency Bonus)
 
-If you used AI tools during development, document them here for transparency:
+Chatgpt,Claude,Gemini,Copilot
 
 **Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
 
 **Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
+-  To generate System Architecture layout
+-  Brainstorming and refining ideas
+-  Code review and optimization suggestions
 
 **Key Prompts Used:**
 - "Create a REST API endpoint for user authentication"
 - "Debug this async function that's causing race conditions"
 - "Optimize this database query for better performance"
 
-**Percentage of AI-generated code:** [Approximately X%]
+**Percentage of AI-generated code:** 75% ,rest we debugged and we added and edited.
 
 **Human Contributions:**
 - Architecture design and planning
@@ -416,9 +452,8 @@ If you used AI tools during development, document them here for transparency:
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+- Shreya Ajith: Frontend Development,UI/UX design,Documentation
+- Pavithra K M: Backend development,Testing,Documentation,System Design
 
 ---
 
