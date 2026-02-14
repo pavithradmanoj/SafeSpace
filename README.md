@@ -20,38 +20,36 @@ https://shreyalbs.github.io/SafeSpace/
 SafeSpace transforms silent civic frustration into collective action by giving every citizen a safe voice to report issues, amplify urgent concerns through community support, and drive transparent resolution from authorities.
 
 ### The Problem statement
-
 Urban cities like Kochi face thousands of unresolved civic issues daily — potholes, broken streetlights, garbage dumps, and safety hazards — simply because there is no simple, direct way for citizens to report them to the right authority. The existing process is bureaucratic, time-consuming, and discouraging, causing most people to stay silent. Meanwhile, authorities have no structured system to receive and prioritize complaints from the public, leaving critical issues unaddressed for months. SafeSpace solves this by providing a two-sided platform where citizens can report issues anonymously in seconds and route them directly to the responsible authority, while authorities get a clean dashboard to manage, filter, and resolve complaints efficiently.
 
 ### The Solution
-[How are you solving it?]
-
----
+SafeSpace is a two-sided civic reporting platform where citizens anonymously report local issues in seconds — with photo, location, and category — routed directly to the responsible authority. Authorities receive a structured dashboard to filter, search, and resolve complaints efficiently, closing the loop between the public and the people who can act.
 
 ## Technical Details
 
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: HTML, CSS, JavaScript
+- Frameworks used: None
+- Libraries used: Google Fonts (Syne, Space Mono)
+- Tools used: VS Code, Live Server, Browser DevTools
 
 **For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+- Main components: None
+- Specifications: None
+- Tools required: None
 
 ---
 
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: Dual Interface — Separate portals for Citizens and Authorities, each designed for their specific needs
+- Feature 2: Anonymous Reporting — Citizens can report issues without revealing their identity
+- Feature 3: Photo Upload — Citizens can attach photographic evidence to strengthen their report
+- Feature 4: Community Upvoting — Citizens can upvote existing reports to signal urgency to authorities
+
 
 ---
 
@@ -86,13 +84,29 @@ List the key features of your project:
 #### Screenshots (Add at least 3)
 
 ![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![alt text](image.png)
+Home Page or the Landing page of our website SafeSpace
 
 ![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![alt text](<images/Screenshot (136).png>)
+Shows the user interface where user can see each issue reported in each category, upvote in issues and 
+is known reporting the issue.
 
 ![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![alt text](<images/Screenshot (134).png>)
+Here there is form for reporting the issue for user which includes features like location,which authority the issue should be brought to notice and which category the issue belongs to and to provide description to the issue and submit photo if required.
+
+![Screenshot4](Add screenshot 4 here with proper name)
+![alt text](<images/Screenshot (135).png>)
+Here this is the Authority login , where each Authority get's their unique password.Then using default password the authority officials can login.
+
+![Screenshot5](Add screenshot 5 here with proper name)
+![alt text](<images/Screenshot (139).png>)
+This is the Authority interface , where authority can select their authority from drop down and resolve the issue and mark them , so that report no longer exits in User interface.
+
+
+
+
 
 #### Diagrams
 
