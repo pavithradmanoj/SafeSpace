@@ -13,10 +13,10 @@
 - Member 2: Pavithra K M- LBS Institute of Technology for Women
 
 ### Hosted Project Link
-[mention your project hosted link here]
+
 
 ### Project Description
-[2-3 lines about what your project does]
+SafeSpeak transforms silent civic frustration into collective action by giving every citizen a safe voice to report issues, amplify urgent concerns through community support, and drive transparent resolution from authorities.
 
 ### The Problem statement
 [What problem are you solving?]
